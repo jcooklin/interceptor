@@ -53,5 +53,6 @@ if __name__ == '__main__':
 
     root = app.Application()
     host, port = cfg.CONF.api.host, cfg.CONF.api.port
+    print("host={0} port={1}".format(host,port))
     server = simple_server.make_server(host, port, root)
     server.serve_forever()
